@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <style>
+            .maindiv{
+                display:flex;
+                justify-content:center;
+                flex-direction:column;
+                align-items: center;
+            }
+            .mainheader{
+                display:flex;
+                justify-content: center;
+                align-items:center;
+            }
+            .confirm{
+                display:flex;
+                justify-content: end;
+                margin-top:20px;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="mainheader">
+                 <h1>Simple Interest Calculator</h1>
+            </div>
+        </header>
+        <main>
+            <div class="maindiv">
+                <div class="submain">
+                    <h3>Principal</h3>
+                    <input class="principal"  type="number" placeholder="enter a number">
+                </div>
+                 <div class="submain">
+                    <h3>Rate</h3>
+                    <input class="rate"  type="number" placeholder="enter a interst rate">
+                </div>
+                 <div class="submain">
+                    <h3>Time</h3>
+                    <input class="time" type="number" placeholder="enter a duration">
+                </div>
+                <div>
+                    <button class="confirm">
+                        confirm
+                    </button>
+                </div>
+            </div>
+        </main>
+        <script>
+            let conform=document.querySelector(".confirm");                     // It is search for .confirm class in HTML structure and it stores that class in the confirm variable
+            conform.addEventListener("click" , () =>{                           // It check wheather the user as "click" on conform botton if he did then it call the function which is written below
+               let principal= document.querySelector(".principal")              // It is search for ".principal" class in HTML structure and it stores that class in the principal variable
+               let rate= document.querySelector(".rate")                        // It is search for ".rate" class in HTML structure and it stores that class in the rate variable
+               let time= document.querySelector(".time")                        // It is search for ".time" class in HTML structure and it stores that class in the time variable
+               let p=Number(principal.value)                                        // it only take the value that  uses as inserted in principal and the html along it is ignored
+               let r=Number(rate.value)                                             // it only take the value that  uses as inserted in rate and the html along it is ignored
+               let t=Number(time.value)                                             // it only take the value that  uses as inserted in time and the html along it is ignored
+               console.log(p,r,t)
+               let interst=(p*r*t)/100                                          //formula for simple interest
+               let total=p+interst                                              //formula for total amount
+               document.body.innerHTML=`                                        
+               <h2>
+                Simple Interest${interst}
+                <br>
+               Total Amount:${total}
+               </h2>`                                                           // display the result in the from of html
+            }
+
+            );
+        </script>
+    </body>
+</html>

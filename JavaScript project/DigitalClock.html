@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color:#111827; 
+            }
+            .subdiv{
+                font-size: 150px;
+                color:  #facc15;;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="maindiv">
+            <div class="subdiv">
+                00:00:00
+            </div>
+        </div>
+        <script>
+            function timeupdate(){                                      //it is a fuction
+            let timevalue=document.querySelector(".subdiv");            //It is search for .subdiv class in HTML structure and it stores that class in the timevalue variable
+            let date=  new Date();                                      // it will dynamically allocate memory for Date().Date it will give the current year , month, day , hour, min,sec
+            let hour= date.getHours()                                   //this will only take current hours from Date()
+            let min=date.getMinutes()                                   //this will only take current minutes from Date()
+            let sec=date.getSeconds()                                   //this will only take current seconds from Date()
+            let hou=hour.toString().padStart(2,'0')                     //tostring() this will covert the value to string and padStart(2,'0') this will add value to the string the frist value that is 2 in my case that is giving to tell the lenght and the second one is to add the value that you want 
+            let m=min.toString().padStart(2,'0')
+            let s=sec.toString().padStart(2,'0')
+            timevalue.innerHTML=`
+            ${hou}:${m}:${s}`
+            }                                                          // this will display the result in html 
+            timeupdate()                                               // it is a function call
+            setInterval(timeupdate,1000)                               // setinterval is like call the function after fix time 
+        </script>
+    </body>
+</html>

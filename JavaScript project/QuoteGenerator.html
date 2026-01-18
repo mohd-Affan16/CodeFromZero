@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <style>
+                body{
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    background-color: #191308;
+                }
+                .quote{
+                    font-size:24px;
+                    color: #76a787;
+
+                }
+                .button{
+                    margin-top:15px;
+                    border:none;
+                    background-color:#76a787;
+                    color:#191308;
+                }
+                .divclass{
+                    display: flex;
+                    /* flex-direction:column; */
+                    justify-content: end;
+                    width: 100%;
+                }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="quote">
+                "Quote of the day"
+            </div>
+            <div class="divclass">
+                <button class="button">
+                    next one
+                </button>
+            </div>
+        </div>
+        <script>
+            let button=document.querySelector(".button");
+            let quote=document.querySelector(".quote")
+             let obj=[{
+                    id:0,
+                    quote:"\Your future is created by what you do today, not tomorrow.\""
+                },{
+                    id:1,
+                    quote:"\"Small steps every day lead to big achievements.\""
+                },
+                {
+                    id:2,
+                    quote:"\"Believe in yourself even when no one else does.\""
+                },
+                {
+                    id:3,
+                    quote:"\"Hard work beats talent when talent doesn’t work hard.\""
+                },
+                 {
+                    id:4,
+                    quote:"\" The journey may be tough, but the destination is worth it.\""
+                }]
+            button.addEventListener('click', () =>{
+                let random=Math.floor(Math.random()*obj.length);
+               
+                for (let item=0;item<obj.length;item++){
+                    if (random===obj[item].id){
+                         quote.innerHTML=`${obj[item].quote}`;
+                         break;
+                    }
+                }
+               
+                
+            })
+        </script>
+    </body>
+</html>

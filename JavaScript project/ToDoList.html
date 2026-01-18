@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color:#191308 ;
+                height: 100%;
+            }
+            .maindiv{
+                width:100%;
+                display:flex;
+                justify-content:end;
+            }
+            .add,.delete{
+                 background-color:#76a787;
+                 color:#191308;
+                 border: 0px;
+            }
+            .todolist  {
+                display: block;
+                color:#76a787;
+                font-size: 30px;
+                width: 100%;
+            }
+            .list{
+                margin-top: 10px;
+                color:#76a787;
+                font-size:20px;
+            }
+            .subdiv{
+                width: 100%;  
+            }
+            .subdivtwo {
+                display: flex;
+                flex-direction: column;      
+                align-items: center;
+                width: 100%;
+                
+            }
+            .subdivthree{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                padding: 10px;
+                justify-content: space-between;
+            }
+
+
+          
+           
+        </style>
+    </head>
+    <body>
+         <div class="maindiv">
+                <button class="add">
+                    Add
+                </button>
+            </div>
+        <div class="subdiv">
+            <div class="todolist">
+                To do list:
+                  <div class="subdivone">
+                    <div class="subdivtwo"> </div>
+                  </div>
+            </div>
+         
+        </div>
+        <script>
+            let addbutton=document.querySelector(".add")
+            addbutton.addEventListener("click", () => {
+               let text=prompt("enter what do you want to do");
+               let text2="*"+text.toString()
+            let contaner=document.querySelector(".subdivtwo")
+            let emptydiv=document.createElement("div")
+            emptydiv.className="subdivthree"
+            let list=document.createElement("div")
+            list.textContent=`${text2}`
+            let delet = document.createElement("button")
+            delet.textContent="Delete"
+            delet.className="delete"
+            delet.onclick=function() {
+                list.remove()
+                delet.remove()
+            }
+            contaner.appendChild(emptydiv)
+            emptydiv.appendChild(list)
+            emptydiv.appendChild(delet)
+            })
+           
+        </script>
+    </body>
+</html>

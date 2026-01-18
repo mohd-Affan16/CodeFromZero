@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color:#191308 ;
+                height: 100%;
+            }
+            .heading{
+                font-size: 30px;
+                font-weight: bold;
+                 color: #76a787;
+                
+            }
+            .headingone{
+                font-size: 20px;
+                font-weight: bold;
+                color: #76a787;
+            }
+            .paragphase{
+                color: #76a787;
+            }
+            .buttondiv{
+                width: 100%;
+                display: flex;
+                justify-content: end
+            }
+            .start{
+                background-color: #76a787;
+                color:#191308;
+                border: none;
+                border-radius: 10px;
+            }
+            .maindiv{
+               width:100%;
+               height: 100%;
+               display: flex;
+               flex-direction: column;
+            }
+            .subdiv{
+                display:flex;
+                flex-direction:column;
+                
+               
+            }
+            .subdivtwo{
+                display:flex;
+                flex-direction:row;
+                justify-content:space-around;
+                color: #76a787;
+                border-top:2px solid #76a787;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div>
+                <span class="heading">Game Time</span><br><br>
+                <span class="headingone">About the game </span><br><br>
+                <span class="paragphase">In this game you are playing against computer . Computer will take a number between 1-100 and you have to guess that number in order to win in other words guess the number game </span>
+            </div>
+            <div class="buttondiv">
+                <button class="start">start the game </button>
+            </div>
+        </div>
+        <div class="maindiv">
+            <div class="subdiv">
+              
+            </div>
+        </div>
+        <script>
+            let start=document.querySelector(".start")
+            let subdiv=document.querySelector(".subdiv")
+            let gamecount=0;
+            start.addEventListener("click", () => {
+            let computernumber=Math.floor(Math.random()*101)
+            won=false;
+            let attemptsUsed=0;
+            gamecount++
+
+            for(let attempt=1;attempt<=5;attempt++){
+            let gamecountone=0;
+            let text=prompt(` your attempt ${attempt}/5 Enter a number between 1 to 100 `);
+            let usernumber=Number.parseInt(text)
+            console.log(typeof(usernumber))
+           
+            console.log(computernumber)
+             
+              if (usernumber > computernumber) {
+            alert("your number is  high!");
+                }
+                else if (usernumber < computernumber) {
+                    alert("your number is low!");
+                }
+                else if(usernumber===null){
+                   break; 
+                }else{
+                    alert(`CORRECT! You won in ${attempt} attempt(s)!`);
+                    won = true;
+                    break;
+                }
+                attemptsUsed = attempt;
+        }   
+            let subdivtwo=document.createElement("div")
+            subdivtwo.className="subdivtwo"
+            let game=document.createElement("div")
+             game.className="game"
+             game.textContent=`game:${gamecount}`
+             subdivtwo.appendChild(game)
+            
+             if(won){
+             alert("You won the game")
+             
+            let gamestatus=document.createElement("div")
+             gamestatus.className="gamestatus"
+             gamestatus.textContent=`Gamestatus:YOU WON`
+              subdivtwo.appendChild(gamestatus)
+            } else{
+                alert("You lost the game")
+                alert(`The computer number was ${computernumber}`)
+                let gamestatus=document.createElement("div")
+             gamestatus.className="gamestatus"
+             gamestatus.textContent=`Gamestatus:YOU LOST`
+              subdivtwo.appendChild(gamestatus)
+            }
+           
+             let attemptcount=document.createElement("div")
+             attemptcount.className="attemptcount"
+             attemptcount.textContent=`attempt:${attemptsUsed}`
+             let gamestatus=document.createElement("div")
+            
+            
+             subdivtwo.appendChild(attemptcount)
+             subdiv.appendChild(subdivtwo)
+            })
+           
+
+        </script>
+    </body>
+</html>
