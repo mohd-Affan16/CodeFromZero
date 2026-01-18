@@ -203,7 +203,7 @@ It’s honest, detailed, and professional — perfect for readers who want to un
 MIT License — free to use/modify.  
 
 ## Contact
-- LinkedIn: [Mohd Affan](https://www.linkedin.com/in/mohd-affan-16)  
+- LinkedIn: [Mohammed Affan](https://www.linkedin.com/in/mohammed-affan-79648934a/)
 - GitHub: [mohd-Affan16](https://github.com/mohd-Affan16)  
 
 Star the repo if it helps — let's build together! 🫶
