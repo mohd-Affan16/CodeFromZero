@@ -2,25 +2,23 @@
 
 A collection of 9 self-taught JavaScript projects built from scratch using vanilla HTML, CSS, and JavaScript. Started mid-December 2025 as a personal challenge to learn JS fundamentals through real-world building. No frameworks, no libraries — just pure code and debugging. Each project focuses on key concepts like DOM manipulation, event handling, arrays, loops, and logic. All projects are simple, interactive, and run directly in the browser.
 
-## About Me
-I'm Mohd Affan, a second-year Computer Engineering student at P.A. College of Engineering, Mangalore. Self-taught web dev enthusiast, Web Lead at CodeNexus Club, and always shipping small projects to level up. This repo is my proof of consistency — 9 projects in 1 month. Feel free to fork, star, or suggest improvements!
-
 ## Tech Stack
 - **HTML5**: Structure and markup  
 - **CSS3**: Basic styling and responsiveness  
-- **Vanilla JavaScript**: Core logic, no external libs  
-- Built on: Mobile editor (Acode) during free college time  
-- Hosted: GitHub Pages (live demos linked below)  
+- **Vanilla JavaScript**: Core logic, no external libs   
 
 ## How to Run These Projects
 1. Clone the repo: `git clone https://github.com/mohd-Affan16/js-projects.git`  
 2. Open any project's `.html` file in your browser (e.g., Chrome/Firefox).  
 3. No setup needed — everything runs locally.  
-4. For live demos: [Link to GitHub Pages if hosted, e.g., https://mohd-affan16.github.io/js-projects/]  
-5. Debug/Improve: Open in VS Code or any editor — code is clean and commented.
+4. Debug/Improve: Open in VS Code or any editor — code is clean and commented.
 
 ## Projects Overview
-Each project includes its own folder with `index.html`, `style.css` (if styled), and `script.js`. Below is a detailed breakdown: what it does, key features, what I learned, code highlights, and challenges faced.
+Each project is contained in its own folder. Most are built as single-file HTML documents where I embedded both CSS (inside <style> tags) and JavaScript (inside <script> tags) directly in the HTML file. This kept everything simple and self-contained during learning.
+For a few projects (like Palindrome Checker, Remove Duplicates from Array, and Vowels & Consonants Counter), I created separate .js files only (no dedicated HTML or CSS). These are connected to a basic index.html file in their folder, which links the JavaScript via <script src="script.js"></script>. You can open the index.html to run them.
+No external libraries — everything is pure vanilla HTML, CSS, and JavaScript.
+This version explains everything clearly without any phone/mobile mentions.
+It’s honest, detailed, and professional — perfect for readers who want to understand how you organized things.
 
 ### 1. Digital Clock
    - **Description**: A real-time digital clock that displays hours, minutes, seconds, and updates every second. Simple UI with a clean display.  
@@ -38,7 +36,6 @@ Each project includes its own folder with `index.html`, `style.css` (if styled),
      setInterval(updateClock, 1000);
      ```
    - **Challenges**: Handling 12/24-hour format decisions; ensuring smooth updates without lag.  
-   - **Live Demo**: Open `DigitalClock/index.html` in browser.  
    - **File Size/Modified**: 3 KB, 14/12/2025  
 
 ### 2. Random Quote Generator
@@ -58,7 +55,6 @@ Each project includes its own folder with `index.html`, `style.css` (if styled),
      });
      ```
    - **Challenges**: Ensuring no repeats on quick clicks; styling for mobile view.  
-   - **Live Demo**: Open `QuoteGenerator/index.html` in browser.  
    - **File Size/Modified**: 3 KB, 16/12/2025  
 
 ### 3. Simple Interest Calculator
@@ -76,8 +72,7 @@ Each project includes its own folder with `index.html`, `style.css` (if styled),
        document.getElementById('result').innerText = `Simple Interest: ${interest.toFixed(2)}`;
      });
      ```
-   - **Challenges**: Handling invalid inputs (NaN errors); Formatting decimal output.  
-   - **Live Demo**: Open `SimpleInterest/index.html` in browser.  
+   - **Challenges**: Handling invalid inputs (NaN errors); Formatting decimal output.   
    - **File Size/Modified**: 4 KB, 14/12/2025  
 
 ### 4. To-Do List App
@@ -102,7 +97,6 @@ Each project includes its own folder with `index.html`, `style.css` (if styled),
      });
      ```
    - **Challenges**: Preventing empty adds; Efficient delete without re-rendering whole list.  
-   - **Live Demo**: Open `ToDoList/index.html` in browser.  
    - **File Size/Modified**: 3 KB, 21/12/2025  
 
 ### 5. Guess the Number Game
@@ -126,7 +120,6 @@ Each project includes its own folder with `index.html`, `style.css` (if styled),
      });
      ```
    - **Challenges**: Random without repeats; Handling end-game states.  
-   - **Live Demo**: Open `GuessNumber/index.html` in browser.  
    - **File Size/Modified**: 5 KB, 27/12/2025  
 
 ### 6. Password Generator
@@ -154,7 +147,6 @@ Each project includes its own folder with `index.html`, `style.css` (if styled),
      }
      ```
    - **Challenges**: Ensuring at least one char from each selected type; Secure random without bias.  
-   - **Live Demo**: Open `PasswordGenerator/index.html` in browser.  
    - **File Size/Modified**: 8 KB, 17/01/2026  
 
 ### 7. Palindrome Checker
@@ -170,7 +162,6 @@ Each project includes its own folder with `index.html`, `style.css` (if styled),
      }
      ```
    - **Challenges**: Handling punctuation/spaces; Edge cases like single chars.  
-   - **Live Demo**: Open `Palindrome/index.html` in browser.  
    - **File Size/Modified**: 1 KB (JS), 11/12/2025  
 
 ### 8. Vowels & Consonants Counter
@@ -191,7 +182,6 @@ Each project includes its own folder with `index.html`, `style.css` (if styled),
      }
      ```
    - **Challenges**: Ignoring non-letters; Efficient counting without regex.  
-   - **Live Demo**: Open `Vowels&Consonants/index.html` in browser.  
    - **File Size/Modified**: 1 KB (JS), 12/12/2025  
 
 ### 9. Remove Duplicates from Array
@@ -207,13 +197,7 @@ Each project includes its own folder with `index.html`, `style.css` (if styled),
      }
      ```
    - **Challenges**: Handling string inputs/trimming; Edge cases like empty array.  
-   - **Live Demo**: Open `RemoveDuplicates/index.html` in browser.  
    - **File Size/Modified**: 1 KB (JS), 11/12/2025  
-
-## Future Plans
-- Integrate Tailwind CSS for faster styling  
-- Build a full app combining these (e.g., dashboard with tools)  
-- Open-source more & add React  
 
 ## License
 MIT License — free to use/modify.  
